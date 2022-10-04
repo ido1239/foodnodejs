@@ -52,21 +52,34 @@
                   </tr>
                   <tr>
                       <td>GET</td>
-                      <td><a href="/foods/?page=2">/foods/?page=2</a></td>
+                      <td><ol>
+                        <li>/foods?page=2</li>
+                        <li>/foods?perPage=5</li>
+                      <li>/foods?reverse=yes</li>
+                     <li>/foods?sort=price</li> 
+                      </ol></td>
                       <td></td>
-                      <td>Get a list of all the foods, will present 10 results in page 2</td>
+                      <td><ol>
+                        <li>Get a list of all the foods, will present 10 results in page 2</li>
+                        <li>Get a list of all the foods, will present 5 results in page</li>
+                        <li>Get a list of all the foods, will present 10 results in page in reverse order (default sort=price</li>
+                        <li>Get a list of all the foods, will present 10 results in page, Defines what the list will be sorted by</li></ol>
+
+                      </td>
                   </tr>
                   <tr>
                       <td>GET</td>
-                      <td><p>	/planes/category/{category name}</p><a href="/foods/category/dessert">/foods/category/dessert</a></td>
+                      <td><p>	/foods/category_id/{category name}</p><a href="/foods/category_id/dessert">/foods/category_id/dessert</a></td>
                       <td></td>
-                      <td>Get a list of all the cars in dessert category, will present 10 results per page</td>
+                      <td>
+                        Get a list of all the foods in selected category, will present 10 results per page
+                      </td>
                   </tr>
                   <tr>
                       <td>GET</td>
-                      <td><p>/foods/prices?min={value}&max={value}</p><a href="/foods/prices/?min=50&max=100"> /foods/prices/?min=50&max=100 </a></td>
+                      <td><p>/foods/prices?min={value}&max={value}</p><a href="/foods/prices/?min=20&max=35"> /foods/prices/?min=20&max=35 </a></td>
                       <td></td>
-                      <td>Get a list of all the foods priced between 50 and 100, will present 10 results per page</td>
+                      <td>Get a list of all the foods priced between 20 and 35, will present 10 results per page(you can add only minimum price or maximum as well)</td>
                   </tr>
                   <tr>
                       <td>POST</td>
